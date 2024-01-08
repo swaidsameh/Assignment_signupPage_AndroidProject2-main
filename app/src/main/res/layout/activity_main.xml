@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79E8F6"
+    tools:context=".MainActivity">
+
+    <!--    1. Create Two activity Main and Home.-->
+    <!--    2. In Main you need to design a signup page and send the data by intent. (profile image, username, name, email, age, address will be taken from user)-->
+    <!--    3. In Home you need show data by intent which is send by Main.-->
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/profile_image"
+        android:src="@drawable/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="johndoe123"
+        android:background="@color/white"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/userNameEt"
+        app:layout_constraintStart_toStartOf="@+id/userNameEt"
+        app:layout_constraintTop_toBottomOf="@+id/userNameEt"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="abcd@email.com"
+        android:background="@color/white"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:textColorHint="#00838F"
+        app:layout_constraintEnd_toEndOf="@+id/nameEt"
+        app:layout_constraintStart_toStartOf="@+id/nameEt"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/ageEt"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="1000"
+        android:background="@color/white"
+        android:hint="@string/age"
+        android:inputType="numberDecimal"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/emailEt"
+        app:layout_constraintStart_toStartOf="@+id/emailEt"
+        app:layout_constraintTop_toBottomOf="@+id/emailEt"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/addressEt"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="abc@email.com"
+        android:background="@color/white"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/ageEt"
+        app:layout_constraintStart_toStartOf="@+id/ageEt"
+        app:layout_constraintTop_toBottomOf="@+id/ageEt"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/goHomeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/go_to_home"
+        android:textAllCaps="true"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/addressEt"
+        app:layout_constraintStart_toStartOf="@+id/addressEt"
+        app:layout_constraintTop_toBottomOf="@+id/addressEt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

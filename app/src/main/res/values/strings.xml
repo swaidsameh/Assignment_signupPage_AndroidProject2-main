@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment_AndroidProject2</string>
+    <string name="username">Username...</string>
+    <string name="name">Name...</string>
+    <string name="email">Email...</string>
+    <string name="age">Age...</string>
+    <string name="address">Address...</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="go_main">Go to Main</string>
+    <string name="Submit" />
+    <string name="go_to_home">Submit</string>
+</resources>

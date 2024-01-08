@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAB7FD"
+    tools:context=".HomeActivity">
+
+    <!--    1. Create Two activity Main and Home.-->
+    <!--    2. In Main you need to design a signup page and send the data by intent. (profile image, username, name, email, age, address will be taken from user)-->
+    <!--    3. In Home you need show data by intent which is send by Main.-->
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/profile_image"
+        android:src="@drawable/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="johndoe123"
+        android:background="@color/white"
+        android:hint="@string/username"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:hint="@string/name"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/userNameTv"
+        app:layout_constraintStart_toStartOf="@+id/userNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTv"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="abcd@email.com"
+        android:background="@color/white"
+        android:hint="@string/email"
+        android:paddingStart="20dp"
+        android:textColorHint="#00838F"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/nameTv"
+        app:layout_constraintStart_toStartOf="@+id/nameTv"
+        app:layout_constraintTop_toBottomOf="@+id/nameTv"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/ageTv"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="1000"
+        android:background="@color/white"
+        android:hint="@string/age"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/emailTv"
+        app:layout_constraintStart_toStartOf="@+id/emailTv"
+        app:layout_constraintTop_toBottomOf="@+id/emailTv"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/addressTv"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="abc@email.com"
+        android:background="@color/white"
+        android:hint="@string/address"
+        android:paddingStart="20dp"
+        android:textColorHint="#757575"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ageTv"
+        app:layout_constraintStart_toStartOf="@+id/ageTv"
+        app:layout_constraintTop_toBottomOf="@+id/ageTv"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/goMainBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/go_main"
+        android:textAllCaps="true"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/addressTv"
+        app:layout_constraintStart_toStartOf="@+id/addressTv"
+        app:layout_constraintTop_toBottomOf="@+id/addressTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
